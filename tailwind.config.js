@@ -56,9 +56,43 @@ const config = {
 			},
 			fontFamily: {
 				sans: [...fontFamily.sans]
-			}
+			},
+			keyframes: {
+				floatUp: {
+				  '0%': { transform: 'translateY(1000px)', opacity: '0' },
+				  '100%': { transform: 'translateY(0)', opacity: '1' },
+				},
+			  },
+			  animation: {
+				'float-up': 'floatUp 25s linear infinite',
+			  },
+			  keyframes: {
+				typing: {
+				  "0%": {
+					width: "0%",
+					visibility: "hidden"
+				  },
+				  "100%": {
+					width: "100%"
+				  }  
+				},
+				blink: {
+				  "50%": {
+					borderColor: "transparent"
+				  },
+				  "100%": {
+					borderColor: "white"
+				  }  
+				}
+			  },
+			  animation: {
+				typing: "typing 3s steps(20)  , blink .7s infinite"
+			  }
 		}
 	},
+	plugins: [require('tailwindcss-animated')],
 };
+
+
 
 export default config;
