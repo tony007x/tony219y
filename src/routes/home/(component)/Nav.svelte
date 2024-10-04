@@ -31,7 +31,7 @@
             <a href="#home" on:click|preventDefault={scroll}>&lt; TONY219Y /&gt;</a>
         </h1>
 
-        <ul class="flex w-1/2 items-center justify-around max-md:hidden">
+        <ul class="flex w-1/2 items-center justify-around max-lg:hidden">
             <li
                 class="text-sm bg-gradient-to-r from-[#EEEEEE] to-[#76ABAE] text-transparent bg-clip-text font-bold hover:text-lg duration-300"
             >
@@ -50,8 +50,11 @@
                 <a href="#projects" on:click|preventDefault={scroll}>Projects</a
                 >
             </li>
+            <li>
+                    <a href="#contact" on:click|preventDefault={scroll} class="flex w-full  px-3 py-2 rounded-xl bg-[#76ABAE] font-bold hover:bg-[#5e8789]">Contact</a>
+            </li>
         </ul>
-        <Button class="sm:hidden" on:click={toggleMenu}><Menu /></Button>
+        <Button class="lg:hidden" on:click={toggleMenu}><Menu /></Button>
     </div>
     {#if isOpen}
         <div 
@@ -74,6 +77,12 @@
             >
                 <a href="#projects" on:click|preventDefault={scroll}>Projects</a>
             </li>
+            <li
+                class="text-sm bg-gradient-to-r from-[#EEEEEE] to-[#76ABAE] text-transparent bg-clip-text font-bold p-3 animate-fade-left animate-delay-200"
+            >
+                <a href="#contact" on:click|preventDefault={scroll}>Contact</a>
+            </li>
+            
         </div>
     {/if}
 </nav>
